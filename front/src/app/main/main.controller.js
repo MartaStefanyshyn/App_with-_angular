@@ -4,13 +4,13 @@
   angular
     .module('angApp')
     .controller('MainController', MainController);
-
-
   /** @ngInject */
     function MainController($scope) {
+    var vm = this;
 
-
-    $scope.message = "Hellllo"
+    vm.sayHello = function(){
+      alert("hello");
+    }
 
     // vm.awesomeThings = [];
     // vm.classAnimation = '';

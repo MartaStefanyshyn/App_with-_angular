@@ -1,1 +1,16 @@
-<button type="button" class="btn btn-lg btn-success" ng-click="group.goodBye()"> World</button>
+
+<table>
+  <tr>
+    <td><h3>All Groups</h3></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr ng-repeat="gr in groups">
+    <td>{{gr.title}}</td>
+    <td>{{gr.created_at}}</td>
+    <td><a class="btn btn-primary"  ng-click="showGroup(gr.id)">Show</a></td>
+    <td><a class="btn btn-primary"  ng-click="editGroup(gr.id)">Edit</a></td>
+    <td><a class="btn btn-danger"  ng-click="deleteGroup(gr.id)">Delete</a></td>
+  </tr>
+</table>
+<a class="btn btn-success"  ng-click="createGroup()">Create Group</a>
